@@ -2,7 +2,7 @@ using BenchmarkTools
 
 @warn "Threads: $(Threads.nthreads())"
 @info "" ENV["OPENBLAS_NUM_THREADS"] ENV["JULIA_NUM_THREADS"]
-Sys.cpu_info()
+display(Sys.cpu_info())
 
 function foo!(A, B)
     Threads.@threads for i = eachindex(A, B)
