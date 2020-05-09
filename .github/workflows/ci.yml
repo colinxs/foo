@@ -43,23 +43,3 @@ jobs:
         env:
           OPENBLAS_NUM_THREADS: 1
           JULIA_NUM_THREADS: 4
-      - name: run
-        run: julia -O3 --project bench.jl
-        env:
-          OPENBLAS_NUM_THREADS: 1
-          JULIA_NUM_THREADS: 1
-      - name: run
-        run: julia -O3 --project bench.jl
-        env:
-          OPENBLAS_NUM_THREADS: 1
-          JULIA_NUM_THREADS: 2
-      - name: run
-        run: julia -O3 --project bench.jl
-        env:
-          OPENBLAS_NUM_THREADS: 1
-          JULIA_NUM_THREADS: 3
-      - name: run
-        run: julia -O3 --project bench.jl
-        env:
-          OPENBLAS_NUM_THREADS: 1
-          JULIA_NUM_THREADS: 4
