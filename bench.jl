@@ -1,5 +1,7 @@
 using BenchmarkTools
 
+@warn "Threads: $(Threads.nthreads())"
+
 function foo!(A, B)
     Threads.@threads for i = eachindex(A, B)
         @inbounds A[i] = B[i] * 2 + rand()
