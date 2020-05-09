@@ -24,7 +24,7 @@ jobs:
       - name: setup
         run: julia --project -e 'using Pkg; Pkg.instantiate()'
       - name: run
-        run: julia bench.jl
+        run: julia --project bench.jl
         env:
           OPENBLAS_NUM_THREADS: 1
           JULIA_NUM_THREADS: 1
