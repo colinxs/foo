@@ -6,14 +6,6 @@ function foo!(A, B)
     end
 end
 
-B = rand(100)
-A = similar(B)
-@btime foo!($A, $B)
-
-B = rand(1000)
-A = similar(B)
-@btime foo!($A, $B)
-
-B = rand(10000)
+B = rand(50000)
 A = similar(B)
 @btime foo!($A, $B)
