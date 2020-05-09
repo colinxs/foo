@@ -2,7 +2,7 @@ using BenchmarkTools
 
 function foo!(A, B)
     Threads.@threads for i = eachindex(A, B)
-        A[i] = B[i] * 2 + rand()
+        @inbounds A[i] = B[i] * 2 + rand()
     end
 end
 
